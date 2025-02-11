@@ -12,11 +12,13 @@ export class ProductSearchComponent {
 
   key="";
 
-  products:Product[]= [];
+  products:Product[]= [];  
 
-  constructor(private productService:ProductServiceService){}
+  constructor(private productService:ProductServiceService){
+   
+  }
 
-  searchProduct(){   
+  searchProduct(){       
     this.products = this.productService.filterProductsByName(this.key);
     this.key="";
   }

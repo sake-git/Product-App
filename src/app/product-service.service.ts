@@ -24,7 +24,8 @@ export class ProductServiceService {
 
   filterProductsByName(name:string ){
 
-    return this.inventory.filter( data => data.name.toLowerCase().match(name.toLowerCase()));
+    let regex = new RegExp(name,'i');
+    return this.inventory.filter(data => data.name.match(regex));
   }
 
   filterProductsByPrice(price:number ){
