@@ -1,0 +1,33 @@
+<div>
+<h1>Search Product</h1>
+<input type="text" name="search" [(ngModel)]="key" ><br>
+<button (click)="searchProduct()">Search by Name</button>
+<button (click)="searchByPrice()">Search by <= Price</button>
+<div>
+    <p>{{products.length}} product found</p>
+    <table *ngIf="products.length >0">
+    <thead>
+        <tr>
+            <th>Product Code</th>
+            <th>Product Name</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td>{{product.productId}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.price | number |currency}}</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="2"> Product Count</td>
+            <td> {{products.length}}</td>
+        </tr>
+    </tfoot>
+
+</table>
+</div>
+</div>
+

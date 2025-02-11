@@ -1,0 +1,34 @@
+h1{
+    text-align: center;
+}
+
+
+table, th,td,tr{
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+    margin:5px;
+}
+
+table{
+    margin:auto;
+}
+
+th, tfoot{
+    background-color: rgb(142, 205, 205);
+}
+
+p,input{
+    display: inline-block;
+   
+}
+
+div{
+    text-align: center;
+}
+
+input,button{
+    margin: 10px;
+}
+
+
